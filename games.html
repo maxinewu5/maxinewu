@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Maxine Wu</title>
+
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+        <link rel="stylesheet" href="styles.css">
+        
+        <script src="scripts.js" async></script>
+        <script src="scripts/blackjack.js" async></script>
+
+        <style>
+        #blackjack {
+            border: 0px black solid;
+        }
+        .bj {
+            /*display: inline-block;*/
+            width: 23vw;
+            float: left;
+            padding: 20px;
+            padding-top: 0px;
+            border: 0px blue solid;
+            margin: 0 0;
+        }
+        </style>
+        
+    </head>
+    <body>
+
+        <div id="nav" class="stroke" class="sticky">
+            <ul id="menu">
+                <li><a href="index.html">Maxine Wu</a></li>
+                <li><a style="background-color: black;">|</a></li>
+                <li><a href="aboutme.html">About</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        
+        <div id="header" style="background-color: #801db9;">
+            <h1 id="hi">Games</h1>
+        </div>
+        <div id="blackjack" class="content">
+            <h2>My Games</h2>
+            <p>I'm not a hardcore gamer by any means, but I do enjoy playing games from time to time. Recently, I've been playing a lot of Minecraft. I like playing on multiplayer servers a lot, because the interactivity makes the game just that much more fun. I also play Brawl Stars (yes, a mobile game). I like the flexibility that mobile games bring, as games are short and easy to squeeze in during your day. I've also been getting into League of Legends a little bit. When I'm not busy dying to jungle camps or tanking tower shots or missing cannon minions, I suppose it's not too bad of a game, if not a little addictive at times.</p>
+            <h2>Blackjack</h2>
+            <p>For fun, I've made this Blackjack minigame. Try it out! It's better to gamble here and lose nothing (but perhaps your pride) than to gamble your life savings away at the casino (like Paganini).</p>            
+            <p>How to Play:</p>
+            <ul>
+                <li>Press Play to start a new game.</li>
+                <li>Press Hit to draw a new card.</li>
+                <li>Press Stand to stop drawing cards.</li>
+            </ul>
+
+            <div class="bj">
+                <p id="winner">First to 21 wins!</p>
+                <button id="play">Play!</button>
+            </div>
+            <div class="bj">
+                <p id="yourhand">Your Hand:</p>
+                <p id="yoursum">Your Sum:</p>
+                <button id="hit">Hit</button>
+                <button id="stand">Stand</button>
+            </div>
+            <div class="bj">
+                <p id="dealerhand">Dealer's Hand:</p>
+                <p id="dealersum">Dealer Sum:</p>
+            </div>
+        </div>
+    </body>
+</html>

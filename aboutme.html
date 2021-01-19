@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Maxine Wu</title>
+
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+        <link rel="stylesheet" href="styles.css">
+
+        <style>
+            .content {
+                height: 250px;
+            }
+            #faq p {
+                display: none;
+            }
+            button {
+                display: block;
+                background-color: dodgerblue;
+            }
+        </style>
+        
+        <script src="scripts.js" async></script>
+    </head>
+    <body>
+        
+        <div id="nav" class="stroke" class="sticky">
+            <ul id="menu">
+                <li><a href="index.html">Maxine Wu</a></li>
+                <li><a style="background-color: black;">|</a></li>
+                <li><a href="aboutme.html">About</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        
+        <div id="header">
+            <h1 id="hi">About Me</h1>
+        </div>
+
+        <div class="content">
+            <h2>Who I Am</h2>
+            <div class="content-left">
+                <p>Hi! I'm Maxine Wu, just a kid who trying to survive in a tough world. I'm passionate about using technology to create meaningful change on the world. I enjoy using my problem solving skills both in theoretical and practical applications. 
+                </p>
+            </div>
+            <div class="content-right">
+                <img src="images/maxine.jpg" width=200px>
+            </div>
+        </div>
+
+        <div class="content">
+            <h2>My Interests</h2>
+            <div class="content-left">
+                <p>At American, I'm involved with VEX Robotics Thing One and Girls Who Code. I really love being able to learn more about programming and meet others who share my love of technology. It's rewarding to be able to build cool things like robots with your friends. I also volunteer to teach math at my elementary school's Math Olympiad program. </p>
+            </div>
+            <div class="content-right">
+                <img src="images/vexrobotics2.jpg" width=200px>
+            </div>
+        </div>
+
+        <div class="content">
+            <h2>My Vacations</h2>
+            <div class="content-left">
+                <p>Most winters, if I can, I try to head up to Tahoe to ski (and occasionally snowboard, though I haven't mastered the skill of being able to turn without falling over completely yet). There's just something satisfying about a long, hard day of skiing.</p>            
+            
+            </div>
+                
+            <div class="content-right">
+                <img src="images/boreal.jpg" width=200px>
+            </div>
+        </div>
+
+
+        <div class="content" id="faq">
+            <h2>Mini FAQ</h2>
+            <p style="display:block">As a very famous person, I'm sure everyone wants to know all about me. These are definitely very frequently asked questions that you will be just thrilled to hear about.
+            </p>
+
+            <button onclick="redir(document.getElementById('food'))">What is your favorite food?</button>
+            <p id="food">My favorite food is seafood, like shrimp and lobster.</p>
+            <button onclick="redir(document.getElementById('music'))">What is your favorite music to listen to?</button>
+            <p id="music">I like lots of music: pop, jazz, rock. I guess I listen to variety.</p>
+            <button onclick="redir(document.getElementById('color'))">What is your favorite color?</button>
+            <p id="color">Why does everyone ask this? Probably some shade of blue, though maroons and reds are nice as well.</p>
+        
+        </div>
+        </div>
+        <script>
+        function redir(elem) {
+            if (elem.style.display === "none") {
+                elem.style.display = "block";
+            } else {
+                elem.style.display = "none";
+            }
+        }
+        </script>
+    </body>
+</html>

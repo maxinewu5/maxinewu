@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Maxine Wu</title>
+
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+        <link rel="stylesheet" href="styles.css">
+        
+        <script src="scripts.js" async></script>
+
+        <style>
+        button,  #submitbutton {
+            background-color: black;
+            font-family: 'Montserrat';
+            border: none;
+            border-radius: 2px;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        </style>
+        
+    </head>
+    <body>
+
+        <div id="nav" class="stroke" class="sticky">
+            <ul id="menu">
+                <li><a href="index.html">Maxine Wu</a></li>
+                <li><a style="background-color: black;">|</a></li>
+                <li><a href="aboutme.html">About</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        
+        <div id="header" style="background-color: black;">
+            <h1 id="hi">Form</h1>
+        </div>
+            
+        <div class="content">
+            <p>Have questions or suggestions??? Just want to talk?? Shooot me a message here and I'll get back to you. </p>
+            <form action="contact.php" method="post">
+                <label for="fname">Name:</label>
+                <input type="text" id="fname" name="fname"><br>
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email"><br>
+                <label for="message">Message:</label>
+                <input type="text" id="message" name="message"><br>
+                <input id="submitbutton" type="submit" name="submit" value="Submit">  
+            </form>
+
+    </body>
+</html>

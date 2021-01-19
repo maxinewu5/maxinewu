@@ -1,0 +1,170 @@
+body {
+    background-color: white;
+    font-family: 'Montserrat';
+    padding: 0;
+}
+#header {
+    margin-left: px;
+    padding: 20vh 0vh;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    background-color: dodgerblue;
+}
+.content {
+    /* border: 2px solid blue; */
+    padding: 3% 7%;
+    /*color: #B8F4EE;*/
+    color: #0A2463;
+}
+.content-left {
+    width: 70%;
+    float: left;
+    /* border: 2px solid red; */
+}
+.content-right {
+    width: 20%;
+    float: left;
+    /* border: 2px solid red; */
+    text-align: center;
+}
+.content h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+.content p {
+    font-size: 20px;
+}
+.textstyle1 {
+    color: dodgerblue;
+}
+.textstyle2 {
+    font-style: italic;
+}
+
+/* menu css  #333 #111*/
+#nav {
+    width: 100%;
+    margin: 0 auto;
+    background: black;
+    padding: 5px 0;
+    box-shadow: 0px 5px 0px dodgerblue;
+  }
+  #nav ul {
+    list-style: none;
+    text-align: center;
+  }
+  #nav ul li {
+    display: inline-block;
+  }
+  #nav ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #F5F5F5;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 0 10px;
+  }
+
+  #nav ul li a:after,
+  #nav ul li a:before {
+    transition: all .5s;
+  }
+  #nav ul li a:hover {
+    color:#E1DEE3;
+  }
+  
+  /* stroke */
+  #nav.stroke ul li a{
+    position: relative;
+  }
+  #nav.stroke ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #E1DEE3;
+    height: 1px;
+  }
+  #nav.stroke ul li a:hover:after {
+    width: 100%;
+  }
+/* sticky on top menu */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+/* quotes formatting */
+.quotes {
+    height: 200px;
+    text-align: center;
+    border: 1px solid orange;
+    color: black;
+    background-color: white;
+}
+.quotes img {
+    float: left;
+}
+.quotes p {
+    margin: 75px;
+    font-size: 20px;
+}
+
+/* quotes fade in css*/
+.container {
+    display: inline-block;
+    position: relative;
+    width: 33%;
+}
+  
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+} 
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: black;
+}
+  
+.container:hover .overlay {
+    opacity: 1;
+}
+  
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+/*button styling*/
+button {
+  background-color: black;
+  font-family: 'Montserrat';
+  border: none;
+  border-radius: 2px;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
