@@ -7,7 +7,8 @@
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="table.css">
         
-        <script src="scripts.js" async></script>
+        <script src = "scripts/scripts.js" async></script>
+        <script src="scripts/musictable.js" async></script>
     </head>
     <body>
         
@@ -19,6 +20,7 @@
                 <li><a href="music.html">Music</a></li>
                 <li><a href="games.html">Games</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="https://sendpaperplanes.herokuapp.com/">  </a></li>
             </ul>
         </div>
         
@@ -28,7 +30,7 @@
 
         <div class="content">
             <h2>My Playlists</h2>
-            <p>If life was a movie, then these are the soundtracks of my life. Sometimes its the soft background music as I work. Sometimes its the music that I jam to with my friends in the car. Whether I'm kicking back on a summer day or crying in my room at 2am, there's always a playlist that I can reach for.</p>
+            <p>If life was a movie, then these are the soundtracks of my life. Sometimes its the soft background music as I work. Sometimes its the music that I jam to with my friends in the car. Whether I'm kicking back on a summer day or wrapping up some homework late at night, there's always a playlist that I can reach for.</p>
             <iframe src="https://open.spotify.com/embed/playlist/5FVNzz57gHOFgGfgNTkW6a" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
             <iframe src="https://open.spotify.com/embed/playlist/5couSPQ6ZYyRhdLVQOIsin" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
             <iframe src="https://open.spotify.com/embed/playlist/3jV8Rg12FwamPkczTtCitz" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
@@ -51,6 +53,7 @@
             <button id="getsongs" onclick="getSongs()" style="background-color: #1DB954;">Recommend me!</button>
             <p id="songdisp"></p>
         </div>
+
         <script>
             function getSongs() {
                 var songs = ["lucky by jason mraz", "good news by ocean park standooff", "stupid for you by waterparks", "someone to you by banners", "cemenery by coin", "broken by loveleytheband", "sweet by psycho by ava max", "rebels by ivy adara", "wake up sunshine by all time low", "out of my league by fitz and the tantrums", "lips don't lie by ally brooke", "hard times by paramore", "dead weight by pvris"];
@@ -59,49 +62,5 @@
                 document.getElementById("songdisp").innerHTML = songs[num];
             }
         </script>
-            <script>
-                var xmlhttp = new XMLHttpRequest();
-                var table="<tr><th>Songs</th><th>Artist</th></tr>";
-          
-                var curRow = document.createElement("TR");
-                curRow.innerHTML = "<th>Songs</th><th>Artist</th>";
-                document.getElementById("table").append(curRow);
-                
-                xmlhttp.onreadystatechange = function() {
-                  if (this.readyState == 4 && this.status == 200) {
-                    var songsJSON = JSON.parse(this.responseText);
-                    var songs = songsJSON;
-                    console.log(songsJSON["songs"]);
-          
-                    for (var i = 0; i < songsJSON["songs"].length; i++) {
-                      var curRow = document.createElement("TR");
-                      curRow.setAttribute("data-href", songs["songs"][i]["href"]);
-          
-                      var curRowText = "";
-                      curRowText += "<td>";
-                      curRowText += songs["songs"][i]["name"];
-                      curRowText +=  "</td><td>";
-                      curRowText += songs["songs"][i]["artist"];
-                      curRowText += "</td>";
-                      curRow.innerHTML = curRowText;
-                      document.getElementById("table").append(curRow);
-                    }
-          
-          
-                    const rows = document.querySelectorAll("tr");
-                    console.log(rows);
-          
-                    rows.forEach(row => {
-                      row.addEventListener("click", () => {
-                        window.location.href = row.dataset.href;
-                       })
-                    })
-                      
-                  }
-                };
-                xmlhttp.open("GET", "songs.json", true);
-                xmlhttp.send();
-          
-              </script>
     </body>
 </html>

@@ -25,34 +25,23 @@
     </div>
 
   <div class="content">
-    <p>Thank you <?php echo $_POST["fname"]; ?> for your message.</p>
+    <p>Thank you <?php echo $_POST["fname"]; ?> for your message. I'll read it eventually, I promise!</p>
 
     <?php
+      $data = file_get_contents('messages.json');
+      $data_array = json_decode($data);
+      $input = array(
+          'name' => $_POST['fname'],
+          'message' => $_POST['message'],
+      );
 
-    class data {
-        public $name;
-        public $email;
-        public $message;
-    }
-    
-    $data = new data();
-    $data->name = $_POST["fname"];
-    $data->email = $_POST["email"];
-    $data->message = $_POST["message"];
-
-    $myJSON = json_encode($data);
-    echo "<p>Your message has been saved as:</p>";
-    echo $myJSON;
-
-    $myfile = fopen("messages.txt", "a") or die("Unable to open file!");
-
-    fwrite($myfile, $myJSON.", \n");
-    fclose($myfile);
+      $data_array[] = $input;
+      $data_array = json_encode($data_array, JSON_PRETTY_PRINT);
+      file_put_contents('messages.json', $data_array);
 
     ?>
     <br>
-    <br>
-    <br>
+
     <a href="contact.html"><< Back to Form</a>
   </div>
 

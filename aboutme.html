@@ -8,8 +8,15 @@
         <link rel="stylesheet" href="styles.css">
 
         <style>
-            .content {
-                height: 250px;
+            .content::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+            .content img {
+                float: right;
+                height: 200px;
+                margin-left: 20px;
             }
             #faq p {
                 display: none;
@@ -20,7 +27,7 @@
             }
         </style>
         
-        <script src="scripts.js" async></script>
+        <script src="scripts/scripts.js" async></script>
     </head>
     <body>
         
@@ -32,6 +39,7 @@
                 <li><a href="music.html">Music</a></li>
                 <li><a href="games.html">Games</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="https://sendpaperplanes.herokuapp.com/">  </a></li>
             </ul>
         </div>
         
@@ -40,38 +48,18 @@
         </div>
 
         <div class="content">
+            <img src="images/maxine2.jpg">
             <h2>Who I Am</h2>
-            <div class="content-left">
-                <p>Hi! I'm Maxine Wu, just a kid who trying to survive in a tough world. I'm passionate about using technology to create meaningful change on the world. I enjoy using my problem solving skills both in theoretical and practical applications. 
-                </p>
-            </div>
-            <div class="content-right">
-                <img src="images/maxine.jpg" width=200px>
-            </div>
+            <p>Hi! I'm Maxine Wu, a junior at American High School. I like listening to music, watching movies, and reading the comment section on AOC's Tweets. In my free time, you'll often find me absolutely destroying my brother in 8Ball or chilling with my friends on Zoom calls.</p>            </p>
         </div>
-
         <div class="content">
-            <h2>My Interests</h2>
-            <div class="content-left">
-                <p>At American, I'm involved with VEX Robotics Thing One and Girls Who Code. I really love being able to learn more about programming and meet others who share my love of technology. It's rewarding to be able to build cool things like robots with your friends. I also volunteer to teach math at my elementary school's Math Olympiad program. </p>
-            </div>
-            <div class="content-right">
-                <img src="images/vexrobotics2.jpg" width=200px>
-            </div>
-        </div>
-
+            <img src="images/vexrobotics2.jpg">
+            <h2>Interests</h2>
+            <p>At American, I'm involved with VEX Robotics Thing One and Girls Who Code. I really love being able to learn more about programming and meet others who share my love of technology. It's rewarding to be able to build cool things like robots with your friends. Outside of American, I volunteer to teach math at my elementary school's Math Olympiad program. </p>        </div>
         <div class="content">
-            <h2>My Vacations</h2>
-            <div class="content-left">
-                <p>Most winters, if I can, I try to head up to Tahoe to ski (and occasionally snowboard, though I haven't mastered the skill of being able to turn without falling over completely yet). There's just something satisfying about a long, hard day of skiing.</p>            
-            
-            </div>
-                
-            <div class="content-right">
-                <img src="images/boreal.jpg" width=200px>
-            </div>
-        </div>
-
+            <img src="images/boreal.jpg">
+            <h2>Vacations</h2>
+            <p>In winter, when I have the chance, I like to head up to Tahoe to ski (and occasionally snowboard, though I haven't mastered the skill of being able to turn without falling over completely yet).  There's nothing like the feeling of tired adrenaline after a long, cold day out in the snow.</p>        </div>
 
         <div class="content" id="faq">
             <h2>Mini FAQ</h2>
@@ -86,7 +74,7 @@
             <p id="color">Why does everyone ask this? Probably some shade of blue, though maroons and reds are nice as well.</p>
         
         </div>
-        </div>
+
         <script>
         function redir(elem) {
             if (elem.style.display === "none") {

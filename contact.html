@@ -6,7 +6,7 @@
         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
         <link rel="stylesheet" href="styles.css">
         
-        <script src="scripts.js" async></script>
+        <script src="scripts/scripts.js" async></script>
 
         <style>
         button,  #submitbutton {
@@ -20,7 +20,14 @@
             margin: 4px 2px;
             cursor: pointer;
         }
-
+        #message {
+            font-family: 'Montserrat';
+            width: 500px;
+            height: 100px;
+        }
+        form input[type=text] {
+            width: 500px;
+        }
         </style>
         
     </head>
@@ -34,6 +41,7 @@
                 <li><a href="music.html">Music</a></li>
                 <li><a href="games.html">Games</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="https://sendpaperplanes.herokuapp.com/">  </a></li>
             </ul>
         </div>
         
@@ -42,16 +50,13 @@
         </div>
             
         <div class="content">
-            <p>Have questions or suggestions??? Just want to talk?? Shooot me a message here and I'll get back to you. </p>
+            <p>Got something to say? Shoot me a message here.</p>
             <form action="contact.php" method="post">
-                <label for="fname">Name:</label>
+                <label for="fname">Name:</label><br>
                 <input type="text" id="fname" name="fname"><br>
-                <label for="email">Email:</label>
-                <input type="text" id="email" name="email"><br>
-                <label for="message">Message:</label>
-                <input type="text" id="message" name="message"><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message"></textarea><br>
                 <input id="submitbutton" type="submit" name="submit" value="Submit">  
             </form>
-
     </body>
 </html>
